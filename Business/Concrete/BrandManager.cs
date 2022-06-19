@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using DataAccess.Abstract;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,34 @@ namespace Business.Concrete
 {
     public class BrandManager:IBrandService
     {
-        IBrandDal brandDal;
+        IBrandDal _brandDal;
         public BrandManager(IBrandDal brandDal)
         {
-            this.brandDal = brandDal;
+            this._brandDal = brandDal;
+        }
+
+        public void Add(Brand brand)
+        {
+            _brandDal.Add(brand);
+            Console.WriteLine("Araba markası eklendi.");
+        }
+
+        public void Delete(Brand brand)
+        {
+            _brandDal.Delete(brand);
+            Console.WriteLine("Marka silindi.");
+        }
+
+        public List<Brand> GetAll()
+        {
+            return _brandDal.GetAll();
+        }
+
+        public void update(Brand brand)
+        {
+            _brandDal.Update(brand);
+            Console.WriteLine("Marka verileri güncellendi");
+
         }
     }
 }

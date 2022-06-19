@@ -11,18 +11,18 @@ namespace Business.Concrete
 {
     public class CarManager : ICarService
     {
-        ICarDal carDal;
+        ICarDal _carDal;
         //ctor yapıyoruz
         public CarManager(ICarDal  carDal)
         {
-            this.carDal = carDal;
+            this._carDal = carDal;
         }
 
         public void Add(Car car)
         {
             if ((car.Description.Length>= 2)&& (car.DailyPrice>0))
             {
-                carDal.Add(car);
+                _carDal.Add(car);
             }
             else
                 Console.WriteLine("Bir sorun oluştu hatalı bilgi girildi açıklama kısmı 2 karakterden az fiyat 0 olamaz!!");
@@ -33,15 +33,15 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
-        public List<Car> GetAll()
+        public List<Car> GetCarDetail()
         {
             //Burda iş yapan kodlar var
-            return carDal.GetAll();
+            return _carDal.GetAll();
         }
 
         public void update(Car car)
         {
-            throw new NotImplementedException();
+            _carDal.Update(car);
         }
     }
 }

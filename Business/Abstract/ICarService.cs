@@ -10,7 +10,7 @@ namespace Business
 {
     public interface ICarService
     {
-        List<Car> GetAll();
+        List<Car> GetCarDetail();
         void Add(Car car);
         void Delete(Car car);
         void update(Car car);
