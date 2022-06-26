@@ -9,6 +9,25 @@ namespace Business.Constants
 {
     public static class Messages
     {
+        //Kullanıcı mesajları
+        public static string UserAdded = "Kullanıcı eklendi.";
+        public static string UserDeleted = "Kullanıcı silindi.";
+        public static string UserUpdated = "Kullanıcı güncellendi.";
+        public static string UserListed = "Kullanıcılar listelendi.";
+
+        //Müşteri mesajları
+        public static string CustomerAdded = "Müşteri eklendi.";
+        public static string CustomerDeleted = "Müşteri silindi.";
+        public static string CustomerUpdated = "Müşteri güncellendi.";
+        public static string CustomerListed = "Müşteriler listelendi.";
+
+        //Kiralama işlem mesajları
+        public static string RentalAdded = "Araç kiralama başarılı.";
+        public static string RentalDeleted = "Kiralama bilgileri silindi.";
+        public static string RentalUpdated = "Kiralama işlemi güncellendi.";
+        public static string RentalValueInvalid = "Araç şuan başka bir kullanıcıya tanımlı kirala işlemi başarısız.";
+        public static string RentalListed = "Kiralama işlemleri listelendi";
+
         //Araçlar için hazır mesajlar
         public static string CarAdded = "Araç eklendi.";
         public static string CarDeleted = "Araç silindi.";
