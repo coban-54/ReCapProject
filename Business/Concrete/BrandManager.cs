@@ -42,7 +42,7 @@ namespace Business.Concrete
             return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == Id));
         }
 
-        public IResult update(Brand brand)
+        public IResult Update(Brand brand)
         {
             return new SuccessResult(Messages.BrandUpdated);
         }
